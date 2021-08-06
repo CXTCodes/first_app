@@ -19,17 +19,20 @@ class _HomePageState extends State<HomePage> {
     List<MaterialButton> buttons = [];
     List<String> textList = [];
     List<Widget> pageList = [];
+    List<MaterialColor> colors = [];
 
     textList.add("路由管理");
     pageList.add(new RouteManage(title: "路由管理"));
+    colors.add(Colors.blue);
 
     for (int i = 0; i < textList.length; i++) {
-      buttons.add(newMaterialButton(textList[i], pageList[i]));
+      buttons.add(newMaterialButton(textList[i], pageList[i],colors[i]));
     }
 
     Scaffold scaffold = new Scaffold(
         appBar: AppBar(
           title: Text(widget.title),
+          brightness: Brightness.dark,
         ),
         //滚动布局
         body: Padding(
@@ -42,10 +45,10 @@ class _HomePageState extends State<HomePage> {
     return scaffold;
   }
 
-  MaterialButton newMaterialButton(String text, Widget page) {
+  MaterialButton newMaterialButton(String text, Widget page,MaterialColor color) {
     var materialButton = MaterialButton(
       child: Text(text),
-      color: Colors.green,
+      color: color,
       textColor: Colors.white,
       onPressed: () {
         Navigator.push(context, CupertinoPageRoute(builder: (context) {
