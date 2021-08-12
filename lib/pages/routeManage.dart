@@ -49,7 +49,9 @@ class RouteManage extends StatelessWidget {
                 child: Text("命名路由"),
                 textColor: Colors.white,
                 color: Colors.blue,
-                onPressed: () {})
+                onPressed: () {
+
+                })
 
           ],
         ),
@@ -59,6 +61,20 @@ class RouteManage extends StatelessWidget {
     return scaffold;
   }
 }
+
+//TODO 命名路由
+class Demo2 extends StatelessWidget{
+  @override
+  Widget build(BuildContext context) {
+    Scaffold scaffold = new Scaffold(
+      appBar: AppBar(title: Text("命名路由"),),
+    );
+
+    return scaffold;
+  }
+
+}
+
 
 //TODO 路由传值
 class TipRoute extends StatelessWidget {
