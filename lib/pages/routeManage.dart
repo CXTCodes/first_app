@@ -50,6 +50,9 @@ class RouteManage extends StatelessWidget {
                 textColor: Colors.white,
                 color: Colors.blue,
                 onPressed: () {
+                  Navigator.push(context,MaterialPageRoute(builder: (context){
+                    return Demo2();
+                  }));
 
                 })
 
@@ -68,6 +71,13 @@ class Demo2 extends StatelessWidget{
   Widget build(BuildContext context) {
     Scaffold scaffold = new Scaffold(
       appBar: AppBar(title: Text("命名路由"),),
+      body: Center(
+        child: Column(
+          children: [
+            Text("命名路由")
+          ],
+        ),
+      ),
     );
 
     return scaffold;
